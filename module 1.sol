@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract ErrorHandling {
+contract HandlingOfError {
     uint b=10;
     // assert function
     function Assert(uint num) public pure{
