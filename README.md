@@ -5,7 +5,7 @@ This is a Solidity smart contract that demonstrates different error handling tec
 ## License
 This contract is using the MIT License.
 
-## Prerequisites
+## version
 Solidity ^0.8.17
 ## Contract Details
 The ErrorHandling contract provides the following functions:
