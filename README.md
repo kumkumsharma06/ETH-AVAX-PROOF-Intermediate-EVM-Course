@@ -30,4 +30,4 @@ Make sure you have Solidity ^0.8.5 installed.
 Compile and deploy the BankToken contract to a supported Ethereum network.
 Interact with the deployed contract by calling the available functions and providing the required parameters.
 # Video Walkthrough 
-
+https://www.loom.com/share/033149bba04f41a4a32664113889dd7e?sid=7773b108-52bd-41f5-9aae-38a5896afce6
