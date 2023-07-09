@@ -1,27 +1,28 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.8.5;
+pragma solidity ^0.8.0;
 
-contract BankToken {
+contract ErrorContract {
+    function requireCondition(uint _stock) public pure returns (string memory) {
+        uint availableStock = 70;
+        require(_stock <= availableStock, "Insufficient stock is available");
+        return "Product is added to cart. Proceed further here to checkout.";
 
-    mapping(address=>uint)public balance;
+    }
+
+    function assertCondition(uint _num2) public pure returns (string memory) {
+        uint currentBid = 300;
+        assert(_num2 > currentBid);
+        return "Bid is accepted.And you are the highest in number.";
+    }
+
+    function revertCondit(uint _age) public pure {
+        uint minimumAge = 18;
+        if (_age < minimumAge) {
+            revert("You must be at least 18 years old to have access this content");
+        }
+    }
+}
     
-
-    function deposit(address _to,uint _value)public payable returns(uint) {
-        assert(_value<20000);
-        balance[_to]+= _value;
-        return balance[_to];
-    }
-
-    function withdraw(address _from, uint _value)public payable {
-        require(balance[_from]>=_value,"You are not have enough balance to withdraw.");
-        balance[_from]-=_value;
-    }
-
-    function transfer(address payable _from , address payable _to , uint _value )public payable {
-        if (balance[_from]<_value){revert("have some money in your account first");}
-        balance[_from]-= _value;
-        balance[_to] += _value;  
-    }
 
 
 }
